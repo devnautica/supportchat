@@ -1,0 +1,30 @@
+#
+# BACKEND
+#
+- DTO for admin/messaging users
+    - SChatMsgWrapper(cmd,data)
+    - SChatConversationInfo(conversation-id,users[],clients[])
+    - SChatUser(email,sha256password)
+- DTO for client
+    - SChatConversationMsg(sender-id,recipient-id,direction,message)
+    - SChatClient(email)
+- JPA for admin/messaging users
+    - SChatUser
+    - SChatPermission
+    - SChatConversation
+    - SChatClient
+- websocket bindings to connect to "conversation" with client
+
+#
+# FRONTEND
+#
+- UI
+- DTO for client
+- websocket bindings
+
+#
+# Android
+#
+- UI
+- make library of DTO for client from backend
+- websocket bindings
